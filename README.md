@@ -1,8 +1,7 @@
 2017-11-17 17:16:56 @hury
-
 kettle solr plugin
 ==================
-项目用途：
+项目概述：
 基于kettle 4.1,solr 7.1 实现 将数据写入到solr core的功能；
 
 项目部署：
@@ -28,3 +27,6 @@ E:.
 
 小结：
 当前仅实现基于solr core的单实例模式，需要研究基于zookeeper模式的数据写入功能；
+
+本项目在如下源码的基础上进行开发调试而成：
+https://github.com/m-khl/kettle-solr-plugin.git
