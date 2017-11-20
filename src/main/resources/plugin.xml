@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin
+	id="SolrInPlugin"
+	iconfile="solr.png"
+	description="Output records into Solr"
+	tooltip="update a Solr Server with Row"
+	category="Output"
+	classname="org.pentaho.di.trans.step.solrin.SolrInMeta">
+	<libraries>
+		<library name="solr_plugin-0.0.1-SNAPSHOT.jar"/>
+		<library name="solr-solrj-7.1.0.jar"/>
+		<library name="httpclient-4.5.3.jar"/>
+		<library name="httpcore-4.4.6.jar"/>  
+		<library name="httpmime-4.5.3.jar"/>
+		<library name="noggit-0.8.jar"/>   
+		<library name="zookeeper-3.4.10.jar"/>               
+	</libraries>
+
+	<localized_category>
+		<category locale="en_US">Output</category>
+		<category locale="zh_CN">输出</category>
+	</localized_category>
+	<localized_description>
+		<description locale="en_US">Solr Output</description>
+	</localized_description>
+	<localized_tooltip>
+		<tooltip locale="en_US">update a Solr Server with Row</tooltip>
+	</localized_tooltip>
+</plugin>
