@@ -5,7 +5,7 @@
 	description="Output records into Solr"
 	tooltip="update a Solr Server with Row"
 	category="Output"
-	classname="org.pentaho.di.trans.step.solrin.SolrInMeta">
+	classname="org.pentaho.di.trans.steps.solrin.SolrInMeta">
 	<libraries>
 		<library name="solr_plugin-0.0.1-SNAPSHOT.jar"/>
 		<library name="solr-solrj-7.1.0.jar"/>

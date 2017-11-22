@@ -13,7 +13,7 @@
  **                                                                   **
  **********************************************************************/
 
-package org.pentaho.di.trans.step.solrin;
+package org.pentaho.di.trans.steps.solrin;
 
 import java.util.List;
 import java.util.Map;

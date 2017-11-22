@@ -1,4 +1,4 @@
-package org.pentaho.di.trans.step.solrin;
+package org.pentaho.di.trans.steps.solrin;
 
 import org.pentaho.di.i18n.BaseMessages;
 

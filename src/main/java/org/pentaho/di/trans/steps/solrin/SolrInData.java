@@ -14,7 +14,7 @@
  **********************************************************************/
  
 
-package org.pentaho.di.trans.step.solrin;
+package org.pentaho.di.trans.steps.solrin;
 
 import org.pentaho.di.core.database.Database;
 import org.pentaho.di.trans.step.BaseStepData;

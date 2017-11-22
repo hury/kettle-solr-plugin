@@ -19,7 +19,7 @@
  *
  */
 
-package org.pentaho.di.trans.step.solrin;
+package org.pentaho.di.trans.steps.solrin;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.ModifyEvent;

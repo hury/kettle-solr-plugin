@@ -13,7 +13,7 @@
  **                                                                   **
  **********************************************************************/
 
-package org.pentaho.di.trans.step.solrin;
+package org.pentaho.di.trans.steps.solrin;
 
 import org.pentaho.di.compatibility.Value;
 import org.pentaho.di.core.Const;
@@ -87,8 +87,9 @@ public class SolrIn extends BaseStep implements StepInterface {
 			logDetailed("Connecting to : [" + url + "]");
 
 			for (int i = 0; i < data.argnrs.length; i++) {
-				doc.addField(// meta.getArgumentField()[i],
-						meta.getArgumentParameter()[i], r[data.argnrs[i]]);
+				if (r[data.argnrs[i]] != null) // 过滤null记录
+					doc.addField(// meta.getArgumentField()[i],
+							meta.getArgumentParameter()[i], r[data.argnrs[i]]);
 
 			}
 			logDetailed("doc:" + doc);
