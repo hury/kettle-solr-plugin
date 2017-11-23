@@ -28,6 +28,8 @@ import org.pentaho.di.trans.step.StepMeta;
 import org.pentaho.di.trans.step.StepMetaInterface;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.apache.solr.client.solrj.SolrServerException;
 import org.apache.solr.client.solrj.impl.HttpSolrClient;
@@ -87,10 +89,20 @@ public class SolrIn extends BaseStep implements StepInterface {
 			logDetailed("Connecting to : [" + url + "]");
 
 			for (int i = 0; i < data.argnrs.length; i++) {
-				if (r[data.argnrs[i]] != null) // 过滤null记录
-					doc.addField(// meta.getArgumentField()[i],
-							meta.getArgumentParameter()[i], r[data.argnrs[i]]);
+				String key = meta.getArgumentParameter()[i];
+				Object value = r[data.argnrs[i]];
 
+				// logDetailed("key:" + key + "\tvalue:"+value);
+				if (value != null) // 过滤null记录
+				{
+					if ("id".equals(key)) {// 如果为主键
+						doc.addField(key, value);
+					} else {// 非主键单值类型，采用局部set更新
+						Map<String, Object> map = new HashMap<String, Object>();
+						map.put("set", value);
+						doc.addField(key, map);
+					} // 对应多值类型，后期扩展
+				}
 			}
 			logDetailed("doc:" + doc);
 			upres = server.add(doc);

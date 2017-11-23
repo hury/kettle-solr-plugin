@@ -37,3 +37,6 @@ buildNumber.properties
 
 # design
 design/
+
+# svn
+.svn
