@@ -36,7 +36,7 @@ buildNumber.properties
 !/.mvn/wrapper/maven-wrapper.jar
 
 # design
-design/
+# design/
 
 # svn
 .svn
