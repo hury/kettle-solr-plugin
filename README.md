@@ -13,6 +13,7 @@
 
 3、将src/main/resources下的plugin.xml,solr.png,和必须的jar包一同拷贝到 solr_plugin 目录下：
 
+```
 E:\dev\data-integration_4.1.0\plugins\steps>tree /f
 E:.
 └─solr_plugin
@@ -25,10 +26,16 @@ E:.
         solr.png
         solr_plugin-0.0.1-SNAPSHOT.jar
         zookeeper-3.4.10.jar
+```
 
 4、启动kettle测试；
 
+![solr output 运行情况](design\doc\solr output 运行情况.png)
+
+![solr output步骤配置](design\doc\solr output步骤配置.png)
+
 ### 小结：
+
 当前仅实现基于solr core的单实例模式，需要研究基于zookeeper模式的数据写入功能；
 
 本项目在如下源码的基础上进行开发调试，感谢开源的力量：
