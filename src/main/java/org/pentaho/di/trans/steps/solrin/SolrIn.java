@@ -161,10 +161,7 @@ public class SolrIn extends BaseStep implements StepInterface {
 		data = (SolrInData) sdi;
 		url = meta.getUrl();
 		server = new HttpSolrClient.Builder(url).withConnectionTimeout(10000).withSocketTimeout(60000).build();
-		// server = new HttpSolrServer(url);
-		// ((HttpSolrServer) server).setConnectionTimeout(5);
-		// ((HttpSolrServer) server).setDefaultMaxConnectionsPerHost(100);
-		// ((HttpSolrServer) server).setMaxTotalConnections(100);
+
 		return super.init(smi, sdi);
 	}
 
